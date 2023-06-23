@@ -6,8 +6,8 @@ import plotly.express as px
 
 st.cache_data()
 def load_data():
-    channel_stats_df = pd.read_csv('./data/channel_stats.csv')
-    vids_df = pd.read_csv('./data/google_dev_vid_details_cleaned.csv')
+    channel_stats_df = pd.read_csv('./YoutubeScrapper/data/channel_stats.csv')
+    vids_df = pd.read_csv('./YoutubeScrapper/data/google_dev_vid_details_cleaned.csv')
     # Convert the date column to a datetime object
     vids_df["uploaded"] = pd.to_datetime(vids_df["uploaded"])
     #vids_df['uploaded'] = vids_df['uploaded'].dt.date
