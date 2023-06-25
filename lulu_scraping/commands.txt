@@ -1,0 +1,2 @@
+scrapy crawl lulu -O products.csv
+scrapy crawl lulu_prd -O products_desc.json
