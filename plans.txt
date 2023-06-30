@@ -1,0 +1,2 @@
+1. put lulu data in firebase
+2. put yt data in firebase 
