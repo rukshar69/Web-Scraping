@@ -17,3 +17,11 @@ The app includes:
 - Scatter plot between views and likes along with their regression
 - Views/Likes by year
 - Time Series Plot for Videos vs Upload Date
+
+## LuLu Market Place Scrapper
+
+### Data Retrieval
+
+- Using Scrapy library product details have been scraped from various products listed for various sub categories under the [electronics](https://www.luluhypermarket.com/en-ae/electronics) section
+- The scraped data is saved in a [JSON file](https://github.com/rukshar69/Web-Scrapping/blob/main/lulu_scraping/lulu_scraper/lulu_scraper/products_desc.json). This is a list of dictionaries where each dict element has product id, name price, url, and summary.
+- The spider crawling code to extract this data is in file [lulu_product_details.py](https://github.com/rukshar69/Web-Scrapping/blob/main/lulu_scraping/lulu_scraper/lulu_scraper/spiders/lulu_product_details.py)

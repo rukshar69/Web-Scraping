@@ -5,7 +5,7 @@ from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 
 st.header('[LuLu Electronics Products](https://www.luluhypermarket.com/en-ae/electronics) Analysis')
-st.write('The info of products are scraped using [scrapy](https://scrapy.org/)')
+st.write('Using Scrapy library product details have been scraped from various products listed for various sub categories under the [electronics](https://www.luluhypermarket.com/en-ae/electronics) section')
 
 st.cache_data()
 def load_data():
@@ -45,6 +45,7 @@ def generate_wordcloud(text):
     st.pyplot(fig)
 
 prd_details = load_data()
+st.write('A glimpse at the JSON scraped data')
 st.write(prd_details)
 
 #************************************************************************************************************
@@ -52,6 +53,9 @@ st.header('Category Distribution')
 sub_categories = [d['sub_cat'] for d in prd_details]
 # Create a pandas Series from the sub_categories list
 sub_category_series = pd.Series(sub_categories)
+st.write('Electronics sub categories')
+unique_sub_categories = list(set(sub_categories))
+st.write(unique_sub_categories)
 
 # Create a dataframe with 'sub_category' and 'count' columns
 df = pd.DataFrame({'sub_category': sub_category_series.unique(), 'count': sub_category_series.value_counts()})
