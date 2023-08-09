@@ -57,8 +57,8 @@ range_labels = [f'{range_values[i]:.2f} - {range_values[i+1]:.2f}' for i in rang
 filtered_data['range'] = pd.cut(filtered_data[selected_column], bins=range_values, labels=range_labels)
 
 # Main content
-st.write('### Donut Chart: Distribution by Numerical Range')
-st.write(f'Showing the distribution within sector: {selected_sector} based on {selected_column} ranges')
+st.write('### Donut Chart: Distribution of Companies by Numerical Range')
+st.write(f'Showing the distribution of companies within sector: {selected_sector} based on {selected_column} ranges')
 
 # Create a donut chart
 if 'sector' in df.columns and 'range' in filtered_data.columns:
